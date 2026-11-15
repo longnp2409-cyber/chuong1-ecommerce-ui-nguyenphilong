@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" role="img" aria-labelledby="title desc">
+  <title id="title">Bìa Kinh tế căn bản cho người học</title>
+  <desc id="desc">Bìa minh họa màu xanh navy với biểu đồ cung cầu cách điệu.</desc>
+  <rect width="360" height="480" rx="18" fill="#12304a"/>
+  <circle cx="285" cy="82" r="76" fill="#2f769c" opacity=".8"/>
+  <path d="M48 330h264M72 286l64-56 52 30 92-112" fill="none" stroke="#f2b544" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="48" y="82" fill="#aed4e9" font-family="Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="3">KINH TẾ · 01</text>
+  <text x="48" y="150" fill="#fff" font-family="Arial, sans-serif" font-size="31" font-weight="700">Kinh tế</text>
+  <text x="48" y="188" fill="#fff" font-family="Arial, sans-serif" font-size="31" font-weight="700">căn bản</text>
+  <text x="48" y="222" fill="#dbe8ef" font-family="Arial, sans-serif" font-size="18">cho người học</text>
+  <text x="48" y="430" fill="#dbe8ef" font-family="Arial, sans-serif" font-size="16">DỮ LIỆU MINH HỌA</text>
+</svg>

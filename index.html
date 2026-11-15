@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Giao diện minh họa thẻ sách kinh tế dành cho người học.">
+    <title>Sách kinh tế dành cho người học</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#noi-dung">Bỏ qua đến nội dung</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <p class="eyebrow">BÀI TẬP CÁ NHÂN · CHƯƠNG 1</p>
+        <h1>Sách kinh tế dành cho người học</h1>
+        <p class="intro">
+          Một giao diện minh họa tập trung vào khả năng đọc nhanh, so sánh giá và xem thông tin sách.
+          Tên sách, tác giả và giá là dữ liệu minh họa.
+        </p>
+      </div>
+    </header>
+
+    <main id="noi-dung" class="container">
+      <section class="catalog" aria-labelledby="tieu-de-danh-sach">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">GỢI Ý ĐỌC</p>
+            <h2 id="tieu-de-danh-sach">Bộ sưu tập mẫu</h2>
+          </div>
+          <p class="section-note">4 chủ đề nền tảng cho sinh viên kinh tế</p>
+        </div>
+
+        <!-- CSS Grid giúp các thẻ có cấu trúc nhất quán ở nhiều kích thước màn hình. -->
+        <div class="book-grid">
+          <article class="book-card">
+            <div class="cover-frame">
+              <img src="images/kinh-te-can-ban.svg" alt="Bìa sách Kinh tế căn bản cho người học">
+            </div>
+            <div class="book-card-body">
+              <p class="book-topic">KINH TẾ</p>
+              <h3>Kinh tế căn bản cho người học</h3>
+              <p class="author">Tác giả minh họa: Lê An Nhiên</p>
+              <p class="price">248.000đ</p>
+              <div class="price-meta">
+                <del>320.000đ</del>
+                <span class="discount">-22,5%</span>
+              </div>
+              <a class="button" href="#sach-kinh-te">Xem thông tin</a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="cover-frame">
+              <img src="images/quan-tri-tinh-gon.svg" alt="Bìa sách Quản trị tinh gọn trong thực hành">
+            </div>
+            <div class="book-card-body">
+              <p class="book-topic">QUẢN TRỊ</p>
+              <h3>Quản trị tinh gọn trong thực hành</h3>
+              <p class="author">Tác giả minh họa: Phạm Minh Khoa</p>
+              <p class="price">315.000đ</p>
+              <div class="price-meta">
+                <del>420.000đ</del>
+                <span class="discount">-25%</span>
+              </div>
+              <a class="button" href="#sach-quan-tri">Xem thông tin</a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="cover-frame">
+              <img src="images/marketing-thuc-chien.svg" alt="Bìa sách Marketing thực chiến cho dự án nhỏ">
+            </div>
+            <div class="book-card-body">
+              <p class="book-topic">MARKETING</p>
+              <h3>Marketing thực chiến cho dự án nhỏ</h3>
+              <p class="author">Tác giả minh họa: Trần Gia Hân</p>
+              <p class="price">224.000đ</p>
+              <div class="price-meta">
+                <del>280.000đ</del>
+                <span class="discount">-20%</span>
+              </div>
+              <a class="button" href="#sach-marketing">Xem thông tin</a>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="cover-frame">
+              <img src="images/thuong-mai-dien-tu.svg" alt="Bìa sách Thương mại điện tử từ ý tưởng đến trải nghiệm">
+            </div>
+            <div class="book-card-body">
+              <p class="book-topic">THƯƠNG MẠI ĐIỆN TỬ</p>
+              <h3>Thương mại điện tử: Từ ý tưởng đến trải nghiệm</h3>
+              <p class="author">Tác giả minh họa: Vũ Hoàng Nam</p>
+              <p class="price">270.000đ</p>
+              <div class="price-meta">
+                <del>360.000đ</del>
+                <span class="discount">-25%</span>
+              </div>
+              <a class="button" href="#sach-thuong-mai-dien-tu">Xem thông tin</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="book-details" aria-labelledby="tieu-de-chi-tiet">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THÔNG TIN CHI TIẾT</p>
+            <h2 id="tieu-de-chi-tiet">Đọc thêm về từng cuốn</h2>
+          </div>
+        </div>
+
+        <div class="details-list">
+          <article class="detail-card" id="sach-kinh-te">
+            <h3>Kinh tế căn bản cho người học</h3>
+            <p>Giới thiệu các khái niệm cung, cầu, thị trường và quyết định kinh tế bằng những ví dụ ngắn, phù hợp với người mới bắt đầu.</p>
+            <a class="back-link" href="#tieu-de-danh-sach">↑ Quay lại danh sách</a>
+          </article>
+
+          <article class="detail-card" id="sach-quan-tri">
+            <h3>Quản trị tinh gọn trong thực hành</h3>
+            <p>Gợi ý cách quan sát quy trình, nhận diện lãng phí và tổ chức công việc nhóm theo hướng rõ ràng, dễ theo dõi.</p>
+            <a class="back-link" href="#tieu-de-danh-sach">↑ Quay lại danh sách</a>
+          </article>
+
+          <article class="detail-card" id="sach-marketing">
+            <h3>Marketing thực chiến cho dự án nhỏ</h3>
+            <p>Tập trung vào việc hiểu khách hàng, xây dựng thông điệp và đo lường một chiến dịch nhỏ bằng các câu hỏi đơn giản.</p>
+            <a class="back-link" href="#tieu-de-danh-sach">↑ Quay lại danh sách</a>
+          </article>
+
+          <article class="detail-card" id="sach-thuong-mai-dien-tu">
+            <h3>Thương mại điện tử: Từ ý tưởng đến trải nghiệm</h3>
+            <p>Phác thảo hành trình từ ý tưởng sản phẩm đến giao diện cửa hàng trực tuyến, nhấn mạnh sự rõ ràng và thuận tiện cho người dùng.</p>
+            <a class="back-link" href="#tieu-de-danh-sach">↑ Quay lại danh sách</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p><strong>Nguyễn Phi Long · MSSV: 87234020044</strong></p>
+        <p>Bài thực hành môn Phát triển ứng dụng thương mại điện tử – UEH</p>
+        <p>Giao diện minh họa phục vụ học tập, không phải website chính thức của Nhà sách Minh Khai.</p>
+      </div>
+    </footer>
+  </body>
+</html>
