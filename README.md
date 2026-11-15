@@ -13,12 +13,14 @@ Sản phẩm là một giao diện minh họa độc lập cho danh sách sách 
 - Năm khu vực khảo sát: trang chủ, danh mục, chi tiết sản phẩm, tìm kiếm và giỏ hàng.
 - Nhận xét khảo sát do sinh viên cung cấp: tên và giá trong danh sách chưa nổi bật; mô tả dài làm khó đọc lướt và so sánh; giao diện nhiều cột trên ảnh chụp Safari iPhone bị thu nhỏ; trang chi tiết phân biệt giá gốc, giá bán và mức giảm; giỏ hàng cập nhật số lượng và tổng tiền đúng theo dữ liệu khảo sát.
 
+Trong trang danh mục đã khảo sát, sinh viên không thấy bộ lọc riêng theo khoảng giá hoặc lựa chọn sắp xếp theo giá, tên sách. Đây là kết quả quan sát có giới hạn phạm vi; sản phẩm thực hành không bổ sung các chức năng này.
+
 ## 3. Chức năng thực tế của trang minh họa
 
 - Hiển thị 4 thẻ sách mẫu với ảnh bìa SVG, tên, tác giả, giá bán, giá gốc và nhãn giảm giá.
 - Liên kết “Xem thông tin” nhảy đến phần mô tả tương ứng; mỗi phần có liên kết quay lại danh sách.
 - Bố cục responsive 4 cột trên màn hình rộng, 2 cột ở màn hình vừa và 1 cột trên điện thoại nhỏ.
-- Không có mua hàng, giỏ hàng, tìm kiếm hay bộ lọc vì đây không phải chức năng được yêu cầu.
+- Phạm vi thực hành chỉ gồm thẻ sách và bố cục responsive; không triển khai mua hàng, giỏ hàng, tìm kiếm hay bộ lọc.
 - Tên sách, tác giả, giá và bìa là dữ liệu minh họa tự tạo.
 
 ## 4. Công nghệ
@@ -31,7 +33,10 @@ Mở trực tiếp file `index.html` bằng Chrome trên máy tính. Sinh viên 
 
 Các đường dẫn tương đối đến `css/style.css` và thư mục `images/` được giữ để hoạt động khi mở file trực tiếp hoặc khi triển khai GitHub Pages.
 
-GitHub/Pages: Chưa triển khai.
+- Repository Public: https://github.com/longnp2409-cyber/chuong1-ecommerce-ui-nguyenphilong
+- Website GitHub Pages: https://longnp2409-cyber.github.io/chuong1-ecommerce-ui-nguyenphilong/
+
+Sinh viên đã upload bằng giao diện GitHub, mở website và thử các liên kết trong cùng trang. Phần URL bắt đầu bằng dấu # xác định vị trí nội dung, không phải website khác.
 
 ## 6. Cải tiến đã thực hiện và vấn đề tương ứng
 
@@ -48,4 +53,5 @@ GitHub/Pages: Chưa triển khai.
 
 ChatGPT hỗ trợ phân tích và chuẩn bị phương án theo thông tin sinh viên cung cấp. Sinh viên đã lựa chọn phương án cải tiến thẻ sách trước khi yêu cầu Codex tạo mã. Codex hỗ trợ tạo file và giải thích mã trong lượt tạo mã. Sau đó, ChatGPT tiếp tục góp ý về chiều cao phần giới thiệu và bìa; sinh viên đã tiếp thu và trực tiếp sửa CSS với hướng dẫn của AI.
 
-Codex đã thực hiện kiểm tra tĩnh cấu trúc file, đường dẫn tương đối, liên kết `id`, dữ liệu giảm giá và nội dung HTML/CSS. Sinh viên đã mở trang bằng Chrome trên máy tính, thử hai loại liên kết và kiểm tra ba kích thước bằng Chrome DevTools. Đây là mô phỏng kích thước màn hình, không phải kiểm tra trên iPhone thật. Chưa xác nhận kiểm tra Tab/focus, toàn bộ trang có tràn ngang hay không hoặc chạy trang cải tiến trên Safari/iPhone thật. Phần giải thích mã là nội dung để sinh viên ôn và tự đối chiếu; không khẳng định sinh viên đã hiểu toàn bộ mã.
+Codex đã thực hiện kiểm tra tĩnh cấu trúc file, đường dẫn tương đối, liên kết `id`, dữ liệu giảm giá và nội dung HTML/CSS. Sinh viên đã mở trang bằng Chrome trên máy tính, thử hai loại liên kết và kiểm tra ba kích thước bằng Chrome DevTools. Đây là mô phỏng kích thước màn hình, không phải kiểm tra trên iPhone thật. Sau khi sửa, sinh viên xác nhận: chữ tác giả dễ đọc hơn, bốn ảnh bìa hiển thị đúng, Tab có viền focus và Enter mở đúng thông tin; cuộn toàn trang ở cả ba kích thước không phát hiện lỗi bố cục hoặc tràn ngang. Chưa có kết quả chạy trang cải tiến trên Safari/iPhone thật; ảnh Safari của website Minh Khai là minh chứng khảo sát trang gốc. Phần giải thích mã là nội dung để sinh viên ôn và tự đối chiếu; không khẳng định sinh viên đã hiểu toàn bộ mã.
+

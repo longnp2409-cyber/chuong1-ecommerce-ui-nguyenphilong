@@ -3,7 +3,8 @@
 ## 1. Công cụ AI
 
 - ChatGPT: hỗ trợ phân tích yêu cầu và chuẩn bị phương án theo thông tin sinh viên cung cấp.
-- Codex: hỗ trợ tạo các file HTML, CSS, SVG và tài liệu trong lượt này.
+- Codex: hỗ trợ tạo các file HTML, CSS, SVG và tài liệu.
+- Claude: hỗ trợ rà soát bản thảo báo cáo; sinh viên đối chiếu và chỉnh lại nội dung theo công việc thực tế.
 
 ## 2. Mục đích sử dụng
 
@@ -11,7 +12,26 @@ Tạo một giao diện HTML5/CSS3 minh họa cải tiến thẻ sách trong dan
 
 ## 3. Prompt đã sử dụng
 
-Prompt dưới đây là nguyên văn yêu cầu sinh viên đã gửi trong lượt này:
+### 3.1 Prompt phân tích đã gửi ChatGPT
+
+> Bạn là chuyên gia phân tích nghiệp vụ và thiết kế trải nghiệm người dùng cho website thương mại điện tử.
+> 
+> Tôi đang khảo sát website: Nhà sách Minh Khai – https://minhkhai.com.vn/store2/index.aspx.
+> 
+> Hãy giúp tôi lập bảng phân tích các khu vực: 1. Trang chủ. 2. Danh mục sản phẩm. 3. Chi tiết sản phẩm. 4. Tìm kiếm. 5. Giỏ hàng.
+> 
+> Với mỗi khu vực, hãy nêu: mục đích của chức năng; thành phần giao diện cần có; điểm thuận tiện đối với khách hàng; một vấn đề có thể phát sinh; một đề xuất cải tiến.
+> Không khẳng định những tính năng chưa được kiểm chứng. Phân biệt rõ nhận xét dựa trên quan sát và đề xuất của AI. Chỉ dựa trên ảnh và thông tin tôi cung cấp.
+
+### 3.2 Trao đổi lựa chọn phương án
+
+Sinh viên đã trao đổi về bố cục, HTML, CSS, cách hiển thị trên máy tính/điện thoại và điểm cần kiểm tra, rồi xác nhận: “Chốt phương án, gửi prompt tạo mã”. Phương án chọn là thẻ sách nhất quán, tên/giá rõ, bốn sản phẩm, bố cục 4–2–1 cột và mô tả trong cùng trang. Đây là tóm tắt trao đổi thực tế, không dựng lại một Prompt 2 nguyên văn.
+
+### 3.3 Prompt tạo mã đã gửi Codex
+
+Giữ nguyên nội dung lịch sử dưới đây. Những câu “Chưa triển khai” hoặc “Chưa xác nhận” trong prompt phản ánh thời điểm gửi, không phải trạng thái hiện tại. Kết quả cuối được cập nhật ở mục 5.
+
+Prompt tạo mã:
 
 > Bạn là trợ lý lập trình hướng dẫn sinh viên thực hành HTML5/CSS3. Hãy tạo dự án trực tiếp trong thư mục đang mở, theo phương án tôi đã lựa chọn dưới đây.
 > 
@@ -248,6 +268,17 @@ Lưu ý: prompt được lưu lại theo nội dung Codex nhận được; khôn
 >
 > Sau khi cập nhật, tóm tắt những mục đã thay đổi và những việc còn chưa xác nhận.
 
+### 3.4 Trao đổi bổ sung và cập nhật tài liệu
+
+Sau khi tự chỉnh sửa, sinh viên xác nhận trong hội thoại:
+
+> 1. Chữ tác giả sau sửa: ok
+> 2. Bốn ảnh bìa: ok
+> 3. Tab có viền và Enter mở đúng thông tin: ok
+> 4. Cuộn toàn trang ở 390 / 768 / 1440 px: ok
+
+Sinh viên cung cấp URL repository, Pages và ảnh website đã triển khai. ChatGPT hỗ trợ cập nhật tài liệu theo các kết quả này; không tự chạy thử để thay thế kiểm tra của sinh viên.
+
 ## 4. Kết quả AI đề xuất và tạo ra
 
 - Tạo `index.html` với cấu trúc ngữ nghĩa gồm header, main, section, article và footer.
@@ -259,8 +290,32 @@ Lưu ý: prompt được lưu lại theo nội dung Codex nhận được; khôn
 
 Codex đã thực hiện kiểm tra tĩnh CSS hiện tại trước khi cập nhật tài liệu và xác nhận các giá trị đang có khớp với thông tin sinh viên cung cấp: `.author` đã là `font-size: calc(0.92rem + 1px);`, cùng các thay đổi mobile trong `@media (max-width: 620px)`. Codex cũng đã kiểm tra tĩnh cấu trúc file, đường dẫn tương đối, các `href` với `id`, phép tính giảm giá và các yêu cầu HTML/CSS chính trong lượt tạo mã.
 
-Sinh viên đã báo đã mở trang bằng Chrome, thử hai loại liên kết, kiểm tra 3 kích thước trong Chrome DevTools và lưu ảnh chụp giao diện cùng mã CSS chỉnh sửa. Đây là thao tác do sinh viên báo, không phải kiểm tra tĩnh của Codex; các kích thước là mô phỏng DevTools, không phải iPhone thật. Chưa xác nhận Tab/focus, toàn bộ trang có tràn ngang hay không, hoặc chạy trang cải tiến trên Safari/iPhone thật. Không viết rằng sinh viên đã hiểu toàn bộ mã; phần giải thích chỉ để sinh viên ôn và tự đối chiếu.
+Sinh viên đã báo đã mở trang bằng Chrome, thử hai loại liên kết, kiểm tra 3 kích thước trong Chrome DevTools và lưu ảnh chụp giao diện cùng mã CSS chỉnh sửa. Đây là thao tác do sinh viên báo, không phải kiểm tra tĩnh của Codex; các kích thước là mô phỏng DevTools, không phải iPhone thật. Kết quả kiểm tra lại đã được sinh viên xác nhận: chữ tác giả sau sửa dễ đọc hơn; đủ bốn bìa; Tab có viền focus, Enter mở đúng thông tin; cuộn toàn trang ở 390/768/1440px không phát hiện lỗi bố cục hoặc tràn ngang. Chưa có kết quả chạy trang cải tiến trên Safari/iPhone thật. Không viết rằng sinh viên đã hiểu toàn bộ mã; phần giải thích chỉ để sinh viên ôn và tự đối chiếu.
+
+Sinh viên đã tạo repository Public và upload bằng giao diện GitHub, sau đó bật Pages:
+
+- https://github.com/longnp2409-cyber/chuong1-ecommerce-ui-nguyenphilong
+- https://longnp2409-cyber.github.io/chuong1-ecommerce-ui-nguyenphilong/
+
+Về đối chiếu khảo sát: nhận xét ban đầu thuộc sinh viên; AI giúp hệ thống hóa và chỉnh ngôn ngữ. Sinh viên giữ nhận xét chữ nhỏ, tên/giá chưa nổi bật và khó tìm thông tin; giới hạn nhận xét ở những trang đã xem. Không dùng các kết luận bao quát rằng website hoàn toàn không responsive, không có chính sách hoặc chưa đăng ký với Bộ Công Thương. Việc không thấy dấu hiệu thông báo/đăng ký hoặc liên kết chính sách rõ ràng được ghi như quan sát và cảm nhận về sự tin tưởng khi giao dịch. Sau khi sinh viên xác nhận không thấy điều khiển lọc/sắp xếp trong trang danh mục, AI cập nhật cách ghi “chưa xác nhận” cho đúng kết quả quan sát. Lọc/sắp xếp chỉ là đề xuất, không thuộc phần đã lập trình.
 
 ## 6. Phần sinh viên hiểu và có thể giải thích
 
 Sinh viên đã tự phát hiện và chỉnh `.author` vì chữ tác giả nhỏ. Sinh viên cũng đã tiếp thu đề xuất AI về việc giảm chiều cao phần giới thiệu và bìa trên màn hình nhỏ, rồi trực tiếp sửa CSS với hướng dẫn của AI. Có thể dùng các giải thích về `font-size`, `calc`, `article`, CSS Grid, media query, `object-fit` và `focus-visible` để ôn và tự đối chiếu; tài liệu này không khẳng định sinh viên đã hiểu toàn bộ mã.
+
+
+Các thành phần đã được giải thích để sinh viên tự đối chiếu với mã:
+
+| Thành phần | Vai trò |
+| --- | --- |
+| `article.book-card` | Bao một thẻ sách độc lập. |
+| `header/main/section/footer` | Tổ chức phần đầu, nội dung chính, các khu vực và chân trang. |
+| `h1–h3`, `img alt` | Phân cấp tiêu đề và mô tả ảnh. |
+| CSS Grid | Chia danh sách thành các cột nhất quán. |
+| Media query 980px/620px | Chuyển bố cục từ 4 sang 2 rồi 1 cột theo chiều rộng. |
+| `font-size: calc(0.92rem + 1px)` | Tăng cỡ chữ tác giả thêm 1px so với giá trị ban đầu. |
+| `padding`, `min-height`, `max-width` | Điều chỉnh khoảng trống và kích thước khung/bìa trên mobile. |
+| `object-fit: contain` | Giữ nội dung ảnh trong khung mà không kéo méo. |
+| `focus-visible` | Hiện viền cho liên kết được chọn bằng bàn phím. |
+| `href="#…"` và `id` | Điều hướng tới vị trí trong cùng trang HTML. |
+
